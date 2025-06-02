@@ -1362,7 +1362,7 @@ textarea:focus {
         <nav class="navbar">
             <div class="nav-container">
               <a href="#home" class="logo" style="text-decoration: none;">
-  <img src="images/logo.PNG" alt="MilkoPure Logo">
+  <img src="images/logo.png" alt="MilkoPure Logo">
   <span class="logo-text">MilkoPure</span>
 </a>
 
@@ -1491,6 +1491,8 @@ textarea:focus {
                     <button class="filter-btn" data-category="ghee">Ghee</button>
                     <button class="filter-btn" data-category="paneer">Paneer</button>
                     <button class="filter-btn" data-category="yogurt">Yogurt</button>
+                    <button class="filter-btn" data-category="cheese">Cheese</button>
+
                 </div>
                 <div class="products-grid" id="productsGrid">
                     <!-- Products will be loaded here -->
@@ -1877,7 +1879,7 @@ const products = [
         name: "Fresh Organic Milk(1l)",
         price: 79,
         category: "milk",
-        image: "images/skimmedmil.jpeg",
+        image: "images/freshmilk.jpg",
         rating: 4.8,
         description: "Pure, fresh organic milk from grass-fed cows. Rich in nutrients and free from hormones.",
         inStock: true
@@ -1886,7 +1888,7 @@ const products = [
         id: 2,
         name: "Premium curd(200g)",
         price: 19,
-        category: "milk",
+        category: "yogurt",
         image: "images/curd.jpeg",
         rating: 4.9,
         description: "A2 protein milk that's easier to digest and naturally sourced from heritage breed cows.",
@@ -1916,7 +1918,7 @@ const products = [
         id: 5,
         name: "Fresh Cottage Cheese(200gm)",
         price: 150,
-        category: "paneer",
+        category: "cheese",
         image: "images/cheese.jpeg",
         rating: 4.6,
         description: "Soft, fresh paneer made daily from organic milk. Perfect for Indian cuisine.",
@@ -1937,11 +1939,22 @@ const products = [
         name: "Greek Style Yogurt(150gm)",
         price:  199,
         category: "yogurt",
-        image: "images/flavouredyogurt.jpeg",
+        image: "images/flavoured.jpg",
         rating: 4.7,
-        description: "C:\Users\pdhan\Downloads\milkopure\flavouredyogurt",
+        description: "Thick, creamy, and protein-rich — our Greek-style yogurt is crafted from 100% organic milk and packed with live cultures.",
         inStock: true
     },
+ {
+        id: 8,
+        name: "Skimmed milk",
+        price: 85,
+        category: "milk",
+        image: "images/Skimmedmil.jpeg",
+        rating: 4.8,
+        description: "Light, nutritious, and heart-friendly — our skimmed milk is low in fat but rich in protein and essential nutrients. ",
+        inStock: true
+    },
+
     {
         id: 8,
         name: "Toned milk",
