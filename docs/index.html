@@ -39,8 +39,9 @@ body {
 }
 
 .navbar {
-    padding: 1rem 0;
+  padding: 0.5rem 0;
 }
+
 
 .nav-container {
     display: flex;
@@ -52,28 +53,24 @@ body {
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #2563eb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px; /* reduced spacing between logo and text */
 }
 
-.logo-icon {
-    width: 40px;
-    height: 40px;
-    background: #2563eb;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 18px;
+.logo img {
+  height: 40px; /* reduced from 70px */
+  width: auto;
+  margin-bottom: 2px;
 }
+
 
 .logo-text {
-    color: #2563eb;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #2563eb;
+  line-height: 1.2;
 }
 
 .nav-menu {
@@ -175,8 +172,8 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, rgba(135, 169, 238, 0.845), rgba(255, 255, 255, 0.7)), 
-                url('milk.jpg');
+    background: 
+url('images/landing.jpeg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -1364,12 +1361,14 @@ textarea:focus {
     <header class="header">
         <nav class="navbar">
             <div class="nav-container">
-                <div class="logo">
-                    <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white">
-                    <i class="fas fa-cow text-lg"></i>
-                </div>
-                    <span class="logo-text">MilkoPure</span>
-                </div>
+              <a href="#home" class="logo" style="text-decoration: none;">
+  <img src="images/logo.png" alt="MilkoPure Logo">
+  <span class="logo-text">MilkoPure</span>
+</a>
+
+
+
+
                 
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#home" class="nav-link">Home</a></li>
@@ -1544,7 +1543,7 @@ textarea:focus {
                         </div>
                         <p>"The quality of milk is exceptional. My family loves the fresh taste and I appreciate the organic certification."</p>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Customer">
+                            <img src="https://img.freepik.com/premium-photo/handsome-business-man-formal-dress_1018831-734.jpg"   alt="Customer">
                             <div>
                                 <h4>Sarah Johnson</h4>
                                 <p>Regular Customer</p>
@@ -2815,6 +2814,18 @@ window.updateQuantity = updateQuantity;
 window.nextStep = nextStep;
 window.prevStep = prevStep;
 window.closeCheckout = closeCheckout;
-window.showLoginModal = showLoginModal; </script>
+window.showLoginModal = showLoginModal;
+
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+ </script>
 </body>
 </html>
